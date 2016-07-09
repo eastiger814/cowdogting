@@ -1,6 +1,5 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
-apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 24
@@ -44,4 +43,18 @@ dependencies {
     compile 'com.google.dagger:dagger:2.2'
     provided 'javax.annotation:jsr250-api:1.0'
 
+    // Firebase
+    compile 'com.google.firebase:firebase-core:9.2.0'                    //Analytics
+    compile 'com.google.firebase:firebase-database:9.2.0'               //Realtime Database
+    compile 'com.google.firebase:firebase-storage:9.2.0'                //Storage
+    compile 'com.google.firebase:firebase-crash:9.2.0'                  //Crash Reporting
+    compile 'com.google.firebase:firebase-auth:9.2.0'                   //Authentication
+    compile 'com.google.firebase:firebase-messaging:9.2.0' //Cloud Messaging / Notifications
+    compile 'com.google.firebase:firebase-config:9.2.0'                //Remote Config
+    compile 'com.google.firebase:firebase-invites:9.2.0'               //Invites / Dynamic Links
+    compile 'com.google.firebase:firebase-ads:9.2.0'                    //AdMob
+    compile 'com.google.android.gms:play-services-appindexing:9.2.0' //App Indexing
 }
+
+// Must be here
+apply plugin: 'com.google.gms.google-services'
